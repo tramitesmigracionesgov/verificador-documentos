@@ -19,11 +19,22 @@
       border-radius: 10px;
       box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
       text-align: center;
+      width: 500px; /* más ancho */
+    }
+    .formulario {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    label {
+      margin-right: 10px;
+      font-weight: bold;
     }
     input {
       padding: 10px;
       width: 200px;
-      margin-right: 10px;
+      margin-right: 5px; /* más pegado al botón */
     }
     button {
       padding: 10px 20px;
@@ -31,15 +42,18 @@
       color: white;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 0px; /* sin redondeado */
     }
   </style>
 </head>
 <body>
   <div class="contenedor">
     <h2>Descarga de documento original</h2>
-    <input type="text" id="token" placeholder="Ingrese el código">
-    <button onclick="descargar()">Descargar</button>
+    <div class="formulario">
+      <label for="token">Token:</label>
+      <input type="text" id="token">
+      <button onclick="descargar()">Descargar</button>
+    </div>
   </div>
 
   <script>
@@ -63,3 +77,4 @@
   </script>
 </body>
 </html>
+
