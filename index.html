@@ -55,21 +55,20 @@
       <button onclick="descargar()">Descargar</button>
     </div>
   </div>
-
   <script>
     function descargar() {
       const codigo = document.getElementById("token").value.trim();
 
       const archivos = {
-        "1111": "https://www.dropbox.com/s/ejemplo1/doc1.pdf?dl=1",
-        "2222": "https://www.dropbox.com/s/ejemplo2/doc2.pdf?dl=1",
-        "3333": "https://www.dropbox.com/s/ejemplo3/doc3.pdf?dl=1",
-        "4444": "https://www.dropbox.com/s/ejemplo4/doc4.pdf?dl=1",
-        "5555": "https://www.dropbox.com/s/ejemplo5/doc5.pdf?dl=1"
+        "81669526": "https://tramitesmigracionesgov.github.io/verificador-documentos/DNM_CMM_020525.pdf",
+        "2222": "https://raw.githubusercontent.com/tuusuario/tu-repositorio/main/documentos/doc2.pdf",
+        "3333": "https://raw.githubusercontent.com/tuusuario/tu-repositorio/main/documentos/doc3.pdf",
+        "4444": "https://raw.githubusercontent.com/tuusuario/tu-repositorio/main/documentos/doc4.pdf",
+        "5555": "https://raw.githubusercontent.com/tuusuario/tu-repositorio/main/documentos/doc5.pdf"
       };
 
       if (archivos[codigo]) {
-        window.location.href = archivos[codigo];
+        window.open(archivos[codigo], "_blank");
       } else {
         alert("Código inválido. Intente nuevamente.");
       }
