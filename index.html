@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descarga de documento</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .contenedor {
+      background: #e8f0ff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Descarga de documento original</h2>
+    <input type="text" id="token" placeholder="Ingrese el código">
+    <button onclick="descargar()">Descargar</button>
+  </div>
+
+  <script>
+    function descargar() {
+      const codigo = document.getElementById("token").value.trim();
+
+      const archivos = {
+        "1111": "https://www.dropbox.com/s/ejemplo1/doc1.pdf?dl=1",
+        "2222": "https://www.dropbox.com/s/ejemplo2/doc2.pdf?dl=1",
+        "3333": "https://www.dropbox.com/s/ejemplo3/doc3.pdf?dl=1",
+        "4444": "https://www.dropbox.com/s/ejemplo4/doc4.pdf?dl=1",
+        "5555": "https://www.dropbox.com/s/ejemplo5/doc5.pdf?dl=1"
+      };
+
+      if (archivos[codigo]) {
+        window.location.href = archivos[codigo];
+      } else {
+        alert("Código inválido. Intente nuevamente.");
+      }
+    }
+  </script>
+</body>
+</html>
